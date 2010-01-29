@@ -26,3 +26,5 @@ Provide anything else then the RTMP protocol and proddibility to make rpc calls/
 WARNING:
 For now this really is experimental software. It neither has been thoroughly tested, beaten against or checked for major security flaws.
 So use at your own risk and let us know what can be improved/fixed or even better send us some patches.
+
+Final note: this was mostly created for the fun of it. It is not much more than a crude hack and since almost all code is derived from the red5 project thats where the real credit belongs, since none of this would be possible without red5, as well as to adobe for releasing BlazeDS for free.  
