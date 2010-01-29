@@ -1,0 +1,28 @@
+What MuleRTMP does and what it does not
+
+BlazeDS
+
+Does:
+
+Adds a new Endpoint MuleRTMPAMFEndpoint so you can include it in your services config.
+The Endpoint also sets some static references (of endpoint and serialization context) into the adapting MuleRTMP classes wrapping red5 code.
+Adds a new MuleRTMPFlexSession to enable push to flex clients over rtmp protocol.
+
+Does not:
+Add any data management capabilities like LCDS.
+
+Red5
+
+Does:
+
+Wraps a couple of class from red5, to monkey patch certain methods. This is needed because MuleRTMP uses only a minimal set of red5 classes and has no need to bootstrap the red5 server itself and therefore some null pointer exceptions need to be avoided.
+Also MuleRTMP uses the deserializer/serializer of BlazeDS instead of the red5 version, to achive better compability with BlazeDS.
+
+Does not:
+Provide anything else then the RTMP protocol and proddibility to make rpc calls/use messaging in BlazeDS. So no video/audio streaming remote shared objects etc. 
+
+
+
+WARNING:
+For now this really is experimental software. It neither has been thoroughly tested, beaten against or checked for major security flaws.
+So use at your own risk and let us know what can be improved/fixed or even better send us some patches.
