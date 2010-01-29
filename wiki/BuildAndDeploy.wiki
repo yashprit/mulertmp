@@ -14,6 +14,12 @@ you probably want to use springs flex integration as well
 
 - Deploying
 
-see java/sample/WEB-INF directory on how to configure/deploy on tomcat. samples use spring-flex.
+see java/sample-web/WEB-INF directory on how to configure/deploy on tomcat. samples use spring-flex.
 sample files will setup a simple messaging destination and service to do basic testing.
  
+
+
+Building and deploying in actionscript
+
+To use the MuleRTMP endpoint in Flex you need to include the swc file provided in as3\MuleRTMPFlexLib\bin or build the MuleRTMPFlexLib project yourself.
+The MuleRTMPChannel is still very basic.
