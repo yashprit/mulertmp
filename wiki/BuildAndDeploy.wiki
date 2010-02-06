@@ -4,17 +4,18 @@ Howto build and deploy
 
 Red5 0.9.0 Final (http://code.google.com/p/red5/)
 BlazeDS 3.2.0.3948 (http://opensource.adobe.com/wiki/display/blazeds/BlazeDS)
+Spring (http://www.springsource.com/)
+Spring BlazeDS Integration(http://www.springsource.org/spring-flex)
 
 - Building
 
 use java/src as source directory
 as libraries you need red5.jar and dependencies from red5 distribution and flex-messaging-*.jar files and dependencies from blazeDS distribution
 
-you probably want to use springs flex integration as well 
 
 - Deploying
 
-see java/sample-web/WEB-INF directory on how to configure/deploy on tomcat. samples use spring-flex.
+see java/sample-web/WEB-INF directory on how to configure/deploy on tomcat. 
 sample files will setup a simple messaging destination and service to do basic testing.
  
 
