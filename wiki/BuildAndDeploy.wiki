@@ -22,13 +22,12 @@ retrieve BlazeDS 3.2.0.3948, Spring, Spring BlazeDS Integration and dependcies w
 compile java source java/source
 flex sources in as3/source
 
+or use mulertmp.jar file
 
 - Deploying
 
-deploy java/sample-web/ directory compilation output and libraries.
+deploy java/sample-web/ directory, compilation output or jar and library jar files.
 sample files will setup a simple messaging destination and service to do basic testing.
- 
-
 
 Building and deploying in actionscript
 
