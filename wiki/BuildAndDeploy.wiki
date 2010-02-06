@@ -1,21 +1,31 @@
-Howto build and deploy
+Howto build and deploy the demo
 
 - Prequisites
 
-Red5 0.9.0 Final (http://code.google.com/p/red5/)
-BlazeDS 3.2.0.3948 (http://opensource.adobe.com/wiki/display/blazeds/BlazeDS)
-Spring (http://www.springsource.com/)
-Spring BlazeDS Integration(http://www.springsource.org/spring-flex)
+checkout source
+https://mulertmp.googlecode.com/svn/trunk/
+
+extract
+
+Red5 0.9.0 Final
+http://www.red5.org/downloads/0_9/red5-0.9.0.zip
+
+create lib-red5
+
+move red5-0.9.0/lib and red5.jar to lib-red5 
+
+retrieve BlazeDS 3.2.0.3948, Spring, Spring BlazeDS Integration and dependcies with Maven using the java/pom.xml file
+
 
 - Building
 
-use java/src as source directory
-as libraries you need red5.jar and dependencies from red5 distribution and flex-messaging-.jar files and dependencies from blazeDS distribution
+compile java source java/source
+flex sources in as3/source
 
 
 - Deploying
 
-see java/sample-web/WEB-INF directory on how to configure/deploy on tomcat. 
+deploy java/sample-web/ directory compilation output and libraries.
 sample files will setup a simple messaging destination and service to do basic testing.
  
 
