@@ -1,0 +1,9 @@
+To configure the MuleRTMP channel in BlazeDS add the following to your services-config.xml
+
+`
+<channel-definition id="my-rtmp" class="wo.lf.mule.messaging.channels.MuleRTMPChannel">
+ <endpoint url="rtmp://{server.name}/{context.root}/messagebroker/rtmp-amf class="wo.lf.blaze.messaging.endpoints.MuleRTMPAMFEndpoint"/>
+</channel-definition>
+`
+
+this will configure the endpoint as well as the corresponding flex channel class.
