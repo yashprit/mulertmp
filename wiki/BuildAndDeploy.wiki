@@ -1,35 +1,13 @@
-Howto build and deploy the demo
+=Howto build and deploy the demo=
 
-- Prequisites
+To build and deploy the MuleRTMP demo application, checkout the source, import into Intellij Idea and add a run configuration for the MuleRTMPSampleWeb:Web artifact.
 
-checkout source
-https://mulertmp.googlecode.com/svn/trunk/
+The MuleRTMP project includes 4 modules:
 
-extract
+*java/* the MuleRTMP sourcecode to wire Red5 and BlazeDS up and dependency pom.xml.
 
-Red5 0.9.0 Final
-http://www.red5.org/downloads/0_9/red5-0.9.0.zip
+*as3/MuleRTMPFlexLib* the MuleRMPFlexLib to connect to the MuleRTMPChannel.
 
-create lib-red5
+*java-sample-web* contains a small demo service and samples for configuration of BlazeDS and spring configuration for the red5 part
 
-move red5-0.9.0/lib and red5.jar to lib-red5 
-
-retrieve BlazeDS 3.2.0.3948, Spring, Spring BlazeDS Integration and dependcies with Maven using the java/pom.xml file
-
-
-- Building
-
-compile java source java/source
-flex sources in as3/source
-
-or use mulertmp.jar file
-
-- Deploying
-
-deploy java/sample-web/ directory, compilation output or jar and library jar files.
-sample files will setup a simple messaging destination and service to do basic testing.
-
-Building and deploying in actionscript
-
-To use the MuleRTMP endpoint in Flex you need to include the swc file provided in as3\MuleRTMPFlexLib\bin or build the MuleRTMPFlexLib project yourself.
-The MuleRTMPChannel is still very basic.
+*as3/MuleRTMPFlexSample* a flex sample application to connect to the sample java service and messaging
