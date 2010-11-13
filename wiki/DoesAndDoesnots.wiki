@@ -12,6 +12,7 @@ It should work with versions 3.x and 4.x of BlazeDS.
 
 Does not:
 Add any data management capabilities like LCDS.
+(You might want to look into direction of the Clear toolkit http://sourceforge.net/projects/cleartoolkit/ i guess you might even use it in conjunction with MuleRTMP)
 
 *Red5*
 
