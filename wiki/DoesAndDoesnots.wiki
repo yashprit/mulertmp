@@ -1,30 +1,31 @@
-What MuleRTMP does and what it does not
+=What MuleRTMP does and what it does not=
 
-BlazeDS
+*BlazeDS*
 
 Does:
 
-Adds a new Endpoint MuleRTMPAMFEndpoint so you can include it in your services config.
-The Endpoint also sets some static references (of endpoint and serialization context) into the adapting MuleRTMP classes wrapping red5 code.
-Adds a new MuleRTMPFlexSession to enable push to flex clients over rtmp protocol.
+Provides the MuleRTMPAMFEndpoint class, so you can use BlazeDs with an rtmp endpoint.
+This is achieved by using the rtmp protocol handler from red5 server.
+Adds a new MuleRTMPFlexSession to enable push capabilities to flex clients over rtmp 
+protocol.
+It should work with versions 3.x and 4.x of BlazeDS.
 
 Does not:
 Add any data management capabilities like LCDS.
 
-Red5
+*Red5*
 
 Does:
 
-Wraps a couple of class from red5, to monkey patch certain methods. This is needed because MuleRTMP uses only a minimal set of red5 classes and has no need to bootstrap the red5 server itself and therefore some null pointer exceptions need to be avoided.
-Also MuleRTMP uses the deserializer/serializer of BlazeDS instead of the red5 version, to achive better compability with BlazeDS.
+MuleRTMP uses some classes from red5, to use the rtmp protocol in BlazeDS.
+Some methods have been replaced with derived code, to be able to bootstrap minimal set of classes. Also some adjustments have been done to use the amf deserializer/serializer of BlazeDS instead of the red5 version for compability with BlazeDS.
 
 Does not:
-Provide anything else then the RTMP protocol and proddibility to make rpc calls/use messaging in BlazeDS. So no video/audio streaming remote shared objects etc. 
-
+Provide anything else then the RTMP protocol and the possibility to make rpc calls/use messaging in BlazeDS. No video/audio streaming, remote shared objects, or other features of red5 are supported. 
 
 
 WARNING:
-For now this really is experimental software. It neither has been thoroughly tested, beaten against or checked for major security flaws.
-So use at your own risk and let us know what can be improved/fixed or even better send us some patches.
+Although MuleRTMP has been serving thousands of users every day for the last couple of month, it cannot be guarantueed that there are no problems hidden or exposed by other use cases. So use at your own risk.
 
-Final note: this was mostly created for the fun of it. It is not much more than a crude hack and since almost all code is derived from the red5 project thats where the real credit belongs, since none of this would be possible without red5, as well as to adobe for releasing BlazeDS for free.  
+Final note:
+MuleRTMP is only a really small adapater between red5 and BlazeDS so lots of credits goes to the Red5 project at http://code.google.com/p/red5/ for providing an opensource solution for the rtmp protocol and adobe for opensourcing BlazeDS at http://opensource.adobe.com/wiki/display/blazeds/BlazeDS. 
