@@ -44,7 +44,7 @@ You will find a sample configuration in the java-sample-web/web/WEB-INF director
         <property name="serviceInvoker" ref="mule.serviceInvoker" />
     </bean>
 
-    <bean id="globalScope" class="org.red5.server.Scope" init-method="init">
+    <bean id="globalScope" class="org.red5.server.scope.Scope" init-method="init">
         <property name="context" ref="globalContext"/>
         <property name="handler" ref="global.handler" />
     </bean>
